@@ -1,0 +1,22 @@
+<!--
+  # 개별 상품에 대한 HTML은 아래와 같습니다.
+
+  <a class="product" href="#">
+  <img src="[A]상품 이미지 경로" width="225px">
+  <div class="product-name">[B]상품 이름</div>
+  <div class="product-price">[C]상품 가격 원</div>
+  </a> 
+-->
+
+{% extends './base.html' %}
+{% load static %}
+
+  {% block product-list %}
+    {% for good in goods %}
+      <a class="product" href="#">
+      <img src={% get_static_prefix %}{{good.img_path}} width="225px">
+      <div class="product-name">{{good.name}}</div>
+      <div class="product-price">{{good.price}}</div>
+      </a> 
+    {% endfor %}
+  {% endblock product-list %}

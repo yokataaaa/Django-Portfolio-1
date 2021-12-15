@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page-list</title>
+</head>
+<body>
+    {% block page-container %}
+    {% endblock page-container %}
+</body>
+</html>

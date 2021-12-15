@@ -1,0 +1,19 @@
+{% extends './base.html' %}
+
+{% block post-container %}
+<h1> 글 목록 페이지</h1>
+<table>
+    <tr>
+        <td>제목</td>
+        <td>작성일시</td>
+        <td>수정일시</td>
+    </tr>
+{% for post in posts %}
+    <tr>
+        <td><a href="{% url 'post-detail' post.id %}">{{post.title}}</td></a>
+        <td>{{post.dt_created}}</td>
+        <td>{{post.dt_modified}}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock post-container %}
